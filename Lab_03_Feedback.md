@@ -1,6 +1,6 @@
 ### Feedback for Lab 03
 
-Run on January 29, 15:32:36 PM.
+Run on January 29, 16:16:21 PM.
 
 
 #### Necessary Files and Structure
@@ -18,27 +18,27 @@ Run on January 29, 15:32:36 PM.
 
 ### Essential Files Exist
 
-+ :x:  Check that file "Makefile" exists.
++ :heavy_check_mark:  Check that file "Makefile" exists.
 
-     "Makefile" not found.
-
-+ :leftwards_arrow_with_hook:  Check that file ".gitignore" exists. (Test not run because of an earlier failing test)
++ :heavy_check_mark:  Check that file ".gitignore" exists.
 
 
 ### .gitignore set up properly
 
-+ :leftwards_arrow_with_hook:  Check that no files with extension ".o" exist in directory "." (Test not run because of an earlier failing test)
++ :heavy_check_mark:  Check that no files with extension ".o" exist in directory "."
 
-+ :leftwards_arrow_with_hook:  Check that no files with extension ".out" exist in directory "." (Test not run because of an earlier failing test)
++ :heavy_check_mark:  Check that no files with extension ".out" exist in directory "."
 
 
 ### Test that code compiles and creates executable
 
-+ :leftwards_arrow_with_hook:  Check that make  compiles. (Test not run because of an earlier failing test)
++ :heavy_check_mark:  Check that make  compiles.
 
-+ :leftwards_arrow_with_hook:  Check that file "ducks" exists. (Test not run because of an earlier failing test)
 
-+ :leftwards_arrow_with_hook:  Check that directory "headers" exists. (Test not run because of an earlier failing test)
+
++ :heavy_check_mark:  Check that file "ducks" exists.
+
++ :heavy_check_mark:  Check that directory "headers" exists.
 
 ---
 
