@@ -1,6 +1,6 @@
 ### Feedback for Lab 04
 
-Run on February 05, 15:25:40 PM.
+Run on February 05, 15:28:24 PM.
 
 
 #### Necessary Files and Structure
@@ -22,20 +22,20 @@ Run on February 05, 15:25:40 PM.
 
 + :heavy_check_mark:  Check that file "Makefile.test" exists.
 
-+ :x:  Check that file ".gitignore" exists.
++ :heavy_check_mark:  Check that file ".gitignore" exists.
 
-     ".gitignore" not found.
++ :heavy_check_mark:  Check that file "point2.cc" exists.
 
-+ :leftwards_arrow_with_hook:  Check that file "point2.cc" exists. (Test not run because of an earlier failing test)
++ :heavy_check_mark:  Check that file "point2.h" exists.
 
-+ :leftwards_arrow_with_hook:  Check that file "point2.h" exists. (Test not run because of an earlier failing test)
-
-+ :leftwards_arrow_with_hook:  Check that file "point2_unittest.cc" exists. (Test not run because of an earlier failing test)
++ :heavy_check_mark:  Check that file "point2_unittest.cc" exists.
 
 
 #### .gitignore set up properly
 
-+ :leftwards_arrow_with_hook:  Check that file/directory "cluster" does not exist. (Test not run because of an earlier failing test)
++ :x:  Check that file/directory "cluster" does not exist.
+
+     "cluster" found.
 
 + :leftwards_arrow_with_hook:  Check that file/directory "point2_unittest" does not exist. (Test not run because of an earlier failing test)
 
