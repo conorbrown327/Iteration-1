@@ -1,6 +1,6 @@
 ### Feedback for Lab 04
 
-Run on February 05, 15:36:02 PM.
+Run on February 05, 15:37:29 PM.
 
 
 #### Necessary Files and Structure
@@ -35,26 +35,35 @@ Run on February 05, 15:36:02 PM.
 
 + :heavy_check_mark:  Check that file/directory "cluster" does not exist.
 
-+ :x:  Check that file/directory "point2_unittest" does not exist.
++ :heavy_check_mark:  Check that file/directory "point2_unittest" does not exist.
 
-     "point2_unittest" found.
++ :heavy_check_mark:  Check that no files with extension ".o" exist in directory "."
 
-+ :leftwards_arrow_with_hook:  Check that no files with extension ".o" exist in directory "." (Test not run because of an earlier failing test)
-
-+ :leftwards_arrow_with_hook:  Check that no files with extension ".out" exist in directory "." (Test not run because of an earlier failing test)
++ :heavy_check_mark:  Check that no files with extension ".out" exist in directory "."
 
 
 #### Test that code compiles and creates the exectuable
 
-+ :leftwards_arrow_with_hook:  Check that make  compiles. (Test not run because of an earlier failing test)
++ :heavy_check_mark:  Check that make  compiles.
 
-+ :leftwards_arrow_with_hook:  Check that file "cluster" exists. (Test not run because of an earlier failing test)
 
-+ :leftwards_arrow_with_hook:  Check that make compiles for Makefile:Makefile.test. Targeting target:point2_unittest (Test not run because of an earlier failing test)
 
-+ :leftwards_arrow_with_hook:  Check that a GoogleTest test passes. (Test not run because of an earlier failing test)
++ :heavy_check_mark:  Check that file "cluster" exists.
 
-+ :leftwards_arrow_with_hook:  Check that a GoogleTest test passes. (Test not run because of an earlier failing test)
++ :heavy_check_mark:  Check that make compiles for Makefile:Makefile.test. Targeting target:point2_unittest
+
+    make successful.
+    Check point2_unittest exists...OK: result point2_unittest found
+
++ :heavy_check_mark:  Check that a GoogleTest test passes.
+    passes the test: Point2Test.DistBtwnBothPositive.
+
+
+
++ :heavy_check_mark:  Check that a GoogleTest test passes.
+    passes the test: Point2Test.DistBtwnInverses.
+
+
 
 ---
 
