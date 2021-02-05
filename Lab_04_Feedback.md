@@ -1,6 +1,6 @@
 ### Feedback for Lab 04
 
-Run on February 05, 15:33:08 PM.
+Run on February 05, 15:36:02 PM.
 
 
 #### Necessary Files and Structure
@@ -33,11 +33,11 @@ Run on February 05, 15:33:08 PM.
 
 #### .gitignore set up properly
 
-+ :x:  Check that file/directory "cluster" does not exist.
++ :heavy_check_mark:  Check that file/directory "cluster" does not exist.
 
-     "cluster" found.
++ :x:  Check that file/directory "point2_unittest" does not exist.
 
-+ :leftwards_arrow_with_hook:  Check that file/directory "point2_unittest" does not exist. (Test not run because of an earlier failing test)
+     "point2_unittest" found.
 
 + :leftwards_arrow_with_hook:  Check that no files with extension ".o" exist in directory "." (Test not run because of an earlier failing test)
 
