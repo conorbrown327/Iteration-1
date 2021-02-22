@@ -1,4 +1,13 @@
-#ifndef PASSENGER_H
+/*! \passenger header file
+ *
+ * \section passenger_sec passenger.h
+ *
+ * This is the passenger header file.
+ * @brief This class contains information about passengers
+ * on a bus. IsOnBus will return true if the given passenger
+ * object is on the bus otherwise false.
+ */
+ #ifndef PASSENGER_H
 #define PASSENGER_H
 
 #include <iostream>
