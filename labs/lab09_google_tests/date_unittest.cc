@@ -95,7 +95,7 @@ TEST_F(DateTest, mutant_constructor_no_add_1900_assess_new) {
 }
 */
 TEST_F(DateTest, mutant_op_minus_arithmetic) {
-  first_day = Date(1970, 2, 1);
+  first_day = Date(1970, 1, 2);
   last_day = first_day - 1;
 
   EXPECT_EQ(last_day.GetUsDate(), "01-01-1970") << "The date Jan 02, 1970 - 1 day did not compute correctly.";
@@ -132,7 +132,7 @@ TEST_F(DateTest, mutant_days_between_return_1_assess_new ) {
   first_day = Date(2016, 6, 1);
   last_day = Date(2016, 6, 15);
 
-  EXPECT_EQ(first_day.DaysBetween(last_day), 15) << "The DaysBetween function does not return the proper value.";
+  EXPECT_EQ(first_day.DaysBetween(last_day), 14) << "The DaysBetween function does not return the proper value.";
 }
 /**
   *
