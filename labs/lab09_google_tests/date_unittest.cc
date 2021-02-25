@@ -87,13 +87,13 @@ TEST_F(DateTest, mutant_epoch_constructor_year) {
 
   EXPECT_EQ(first_day.GetUsDate(), "01-01-1970") << "When using the epoch constructor the min value is not correct.";
 }
-/*
+
 TEST_F(DateTest, mutant_constructor_no_add_1900_assess_new) {
   first_day = Date(2000, 1, 1);
 
   EXPECT_EQ(first_day.GetUsDate(), "01-01-2000") << "The date Jan 01, 2000 is incorrectly initialized.";
 }
-*/
+
 TEST_F(DateTest, mutant_op_minus_arithmetic) {
   first_day = Date(1970, 1, 2);
   last_day = first_day - 1;
