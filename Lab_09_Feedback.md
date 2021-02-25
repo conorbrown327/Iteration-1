@@ -1,6 +1,6 @@
 ### Fuller Feedback for Lab 09
 
-Run on February 24, 22:43:39 PM.
+Run on February 24, 23:57:24 PM.
 
 + :heavy_check_mark:  Run git ls-remote to check for existence of specific branch- Branch master found
 
@@ -76,7 +76,7 @@ Run on February 24, 22:43:39 PM.
 + :heavy_check_mark:  Check that file "date_unittest" exists.
 
 + :heavy_check_mark:  Get all google tests.
-    4 tests found.
+    9 tests found.
 
 
 
@@ -103,7 +103,46 @@ Run on February 24, 22:43:39 PM.
 
 
 
-+ :heavy_check_mark:  100.0% of the tests passed. Expected at least 100%.
++ :x:  Check that a GoogleTest test passes.
+    fails the test: DateTest.mutant_op_minus_arithmetic.
+<pre>
+[ RUN      ] DateTest.mutant_op_minus_arithmetic
+date_unittest.cc:101: Failure
+Expected equality of these values:
+  last_day.GetUsDate()
+    Which is: "01-31-1970"
+  "01-01-1970"
+The date Jan 02, 1970 - 1 day did not compute correctly.</pre>
+
+
++ :heavy_check_mark:  Check that a GoogleTest test passes.
+    passes the test: DateTest.mutant_days_between_no_leap.
+
+
+
++ :heavy_check_mark:  Check that a GoogleTest test passes.
+    passes the test: DateTest.mutant_get_date_separator_omit.
+
+
+
++ :heavy_check_mark:  Check that a GoogleTest test passes.
+    passes the test: DateTest.mutant_get_us_date_wrong_format.
+
+
+
++ :x:  Check that a GoogleTest test passes.
+    fails the test: DateTest.mutant_days_between_return_1_assess_new.
+<pre>
+[ RUN      ] DateTest.mutant_days_between_return_1_assess_new
+date_unittest.cc:135: Failure
+Expected equality of these values:
+  first_day.DaysBetween(last_day)
+    Which is: 14
+  15
+The DaysBetween function does not return the proper value.</pre>
+
+
++ :x:  77.78% of the tests passed, but the target is 100%.
 
 ---
 
@@ -129,8 +168,7 @@ Run on February 24, 22:43:39 PM.
 
 + :heavy_check_mark:  Dynamic Check that file exists.
 
-+ :x:  There is no test case for mutant_epoch_constructor_year (since all tests pass).
-   - Reason - Dates constructed with epoch are about 70 years in the future
++ :heavy_check_mark:  At least one test failed for mutant_epoch_constructor_year
 
 + :heavy_check_mark:  Check that make clean compiles.
 
@@ -219,8 +257,7 @@ Run on February 24, 22:43:39 PM.
 
 + :heavy_check_mark:  Dynamic Check that file exists.
 
-+ :x:  There is no test case for mutant_get_date_separator_omit (since all tests pass).
-   - Reason - Dates from GetDate are missing a character
++ :heavy_check_mark:  At least one test failed for mutant_get_date_separator_omit
 
 + :heavy_check_mark:  Check that make clean compiles.
 
@@ -249,8 +286,7 @@ Run on February 24, 22:43:39 PM.
 
 + :heavy_check_mark:  Dynamic Check that file exists.
 
-+ :x:  There is no test case for mutant_days_between_no_leap (since all tests pass).
-   - Reason - 1/1/2016 to 3/1/2016 is 60 days, but this version returns 59
++ :heavy_check_mark:  At least one test failed for mutant_days_between_no_leap
 
 + :heavy_check_mark:  Check that make clean compiles.
 
@@ -279,8 +315,7 @@ Run on February 24, 22:43:39 PM.
 
 + :heavy_check_mark:  Dynamic Check that file exists.
 
-+ :x:  There is no test case for mutant_days_between_arithmetic (since all tests pass).
-   - Reason - Days between calculation seems to be much larger than it should be.
++ :heavy_check_mark:  At least one test failed for mutant_days_between_arithmetic
 
 + :heavy_check_mark:  Check that make clean compiles.
 
@@ -309,8 +344,7 @@ Run on February 24, 22:43:39 PM.
 
 + :heavy_check_mark:  Dynamic Check that file exists.
 
-+ :x:  There is no test case for mutant_get_us_date_wrong_format (since all tests pass).
-   - Reason - Dates from GetUsDate are not in the right format (same as GetDate?)
++ :heavy_check_mark:  At least one test failed for mutant_get_us_date_wrong_format
 
 + :heavy_check_mark:  Check that make clean compiles.
 
@@ -339,8 +373,7 @@ Run on February 24, 22:43:39 PM.
 
 + :heavy_check_mark:  Dynamic Check that file exists.
 
-+ :x:  There is no test case for mutant_days_between_abs_assess (since all tests pass).
-   - Reason - Does order matter? Can the value be negative?
++ :heavy_check_mark:  At least one test failed for mutant_days_between_abs_assess
 
 + :heavy_check_mark:  Check that make clean compiles.
 
@@ -369,8 +402,7 @@ Run on February 24, 22:43:39 PM.
 
 + :heavy_check_mark:  Dynamic Check that file exists.
 
-+ :x:  There is no test case for mutant_days_between_return_1_assess_new (since all tests pass).
-   - Reason - Days between Jun 1, 2016 and Jun 15, 2016 returns 1
++ :heavy_check_mark:  At least one test failed for mutant_days_between_return_1_assess_new
 
 + :heavy_check_mark:  Check that make clean compiles.
 
@@ -380,7 +412,7 @@ Run on February 24, 22:43:39 PM.
 
 ---
 
-+ :x:  0.0% of the tests passed, but the target is 93%.
++ :x:  77.78% of the tests passed, but the target is 93%.
 
 ---
 
