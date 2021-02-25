@@ -11,7 +11,7 @@ CXXFLAGS = -std=c++11 -g -fPIC
 -include $(DEP_DIR)/env
 
 ##### EDIT ME!!! #####################
-MAINDATEFILE = date.cc
+MAINDATEFILE = date.correct.cc
 ######################################
 LABTESTEXE = date_unittest
 LABEXE = date
