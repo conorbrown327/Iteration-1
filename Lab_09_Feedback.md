@@ -1,6 +1,6 @@
 ### Fuller Feedback for Lab 09
 
-Run on February 24, 23:57:24 PM.
+Run on February 25, 00:01:36 AM.
 
 + :heavy_check_mark:  Run git ls-remote to check for existence of specific branch- Branch master found
 
@@ -103,16 +103,9 @@ Run on February 24, 23:57:24 PM.
 
 
 
-+ :x:  Check that a GoogleTest test passes.
-    fails the test: DateTest.mutant_op_minus_arithmetic.
-<pre>
-[ RUN      ] DateTest.mutant_op_minus_arithmetic
-date_unittest.cc:101: Failure
-Expected equality of these values:
-  last_day.GetUsDate()
-    Which is: "01-31-1970"
-  "01-01-1970"
-The date Jan 02, 1970 - 1 day did not compute correctly.</pre>
++ :heavy_check_mark:  Check that a GoogleTest test passes.
+    passes the test: DateTest.mutant_op_minus_arithmetic.
+
 
 
 + :heavy_check_mark:  Check that a GoogleTest test passes.
@@ -130,19 +123,12 @@ The date Jan 02, 1970 - 1 day did not compute correctly.</pre>
 
 
 
-+ :x:  Check that a GoogleTest test passes.
-    fails the test: DateTest.mutant_days_between_return_1_assess_new.
-<pre>
-[ RUN      ] DateTest.mutant_days_between_return_1_assess_new
-date_unittest.cc:135: Failure
-Expected equality of these values:
-  first_day.DaysBetween(last_day)
-    Which is: 14
-  15
-The DaysBetween function does not return the proper value.</pre>
++ :heavy_check_mark:  Check that a GoogleTest test passes.
+    passes the test: DateTest.mutant_days_between_return_1_assess_new.
 
 
-+ :x:  77.78% of the tests passed, but the target is 100%.
+
++ :heavy_check_mark:  100.0% of the tests passed. Expected at least 100%.
 
 ---
 
@@ -227,8 +213,7 @@ The DaysBetween function does not return the proper value.</pre>
 
 + :heavy_check_mark:  Dynamic Check that file exists.
 
-+ :x:  There is no test case for mutant_op_minus_arithmetic (since all tests pass).
-   - Reason - operator-: Probably a copy paste error
++ :heavy_check_mark:  At least one test failed for mutant_op_minus_arithmetic
 
 + :heavy_check_mark:  Check that make clean compiles.
 
@@ -412,7 +397,7 @@ The DaysBetween function does not return the proper value.</pre>
 
 ---
 
-+ :x:  77.78% of the tests passed, but the target is 93%.
++ :x:  88.89% of the tests passed, but the target is 93%.
 
 ---
 
