@@ -82,7 +82,7 @@ TEST_F(DateTest, DaysBetweenTests) {
   EXPECT_EQ(first_day.DaysBetween(last_day), 98) << "Days between is not calculated properly";
 }
 
-TEST_F(DateTest, EpochConstructorTest) {
+TEST_F(DateTest, mutant_epoch_constructor_year) {
   first_day = Date(0); 
   last_day = Date(2147483647);
   EXPECT_EQ(first_day.GetUsDate(), "01-01-1970") << "First day of class not setup properly";
