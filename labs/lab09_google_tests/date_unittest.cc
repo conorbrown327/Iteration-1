@@ -82,6 +82,12 @@ TEST_F(DateTest, DaysBetweenTests) {
   EXPECT_EQ(first_day.DaysBetween(last_day), 98) << "Days between is not calculated properly";
 }
 
+TEST_F(DateTest, EpochConstructorTest) {
+  first_day = Date(0); 
+  last_day = Date(2147483647);
+  EXPECT_EQ(first_day.GetUsDate(), "01-01-1970") << "First day of class not setup properly";
+  EXPECT_EQ(last_day.GetUsDate(), "01-19-2038") << "Last day of class not setup properly";
+}
 /**
   *
   * NOPE!  Can't test PRIVATE methods
