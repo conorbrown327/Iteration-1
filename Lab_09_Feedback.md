@@ -1,6 +1,6 @@
 ### Fuller Feedback for Lab 09
 
-Run on February 22, 14:09:37 PM.
+Run on February 24, 22:18:24 PM.
 
 + :heavy_check_mark:  Run git ls-remote to check for existence of specific branch- Branch master found
 
@@ -15,9 +15,11 @@ Run on February 22, 14:09:37 PM.
 
 + :heavy_check_mark:  Check that directory "labs/lab09_google_tests" exists.
 
-+ :heavy_check_mark:  Check that file/directory "labs/lab09_google_tests/date" does not exist.
++ :x:  Check that file/directory "labs/lab09_google_tests/date" does not exist.
 
-+ :heavy_check_mark:  Check that file/directory "labs/lab09_google_tests/date_unittest" does not exist.
+     "labs/lab09_google_tests/date" found.
+
++ :leftwards_arrow_with_hook:  Check that file/directory "labs/lab09_google_tests/date_unittest" does not exist. (Test not run because of an earlier failing test)
 
 ---
 
@@ -76,302 +78,87 @@ Run on February 22, 14:09:37 PM.
 + :heavy_check_mark:  Check that file "date_unittest" exists.
 
 + :heavy_check_mark:  Get all google tests.
-    3 tests found.
+    4 tests found.
 
 
 
 
 #### Results
 
-+ :heavy_check_mark:  Check that a GoogleTest test passes.
-    passes the test: DateTest.PrintDateTests.
++ :x:  Check that a GoogleTest test passes.
+    fails the test: DateTest.PrintDateTests.
+<pre>
+[ RUN      ] DateTest.PrintDateTests
+date_unittest.cc:41: Failure
+Expected equality of these values:
+  output2
+    Which is: "1776-7-4\n"
+  expected_out_2
+    Which is: "1776-07-04\n"</pre>
 
 
++ :x:  Check that a GoogleTest test passes.
+    fails the test: DateTest.PrintDateTestsWithoutNewline.
+<pre>
+[ RUN      ] DateTest.PrintDateTestsWithoutNewline
+date_unittest.cc:67: Failure
+Expected equality of these values:
+  output2
+    Which is: "1776-7-4"
+  expected_out_2
+    Which is: "1776-07-04"</pre>
 
-+ :heavy_check_mark:  Check that a GoogleTest test passes.
-    passes the test: DateTest.PrintDateTestsWithoutNewline.
+
++ :x:  Check that a GoogleTest test passes.
+    fails the test: DateTest.DaysBetweenTests.
+<pre>
+[ RUN      ] DateTest.DaysBetweenTests
+date_unittest.cc:80: Failure
+Expected equality of these values:
+  first_day.GetUsDate()
+    Which is: "201809-04"
+  "09-04-2018"
+First day of class not setup properly
+date_unittest.cc:81: Failure
+Expected equality of these values:
+  last_day.GetUsDate()
+    Which is: "201812-11"
+  "12-11-2018"
+Last day of class not setup properly
+date_unittest.cc:82: Failure
+Expected equality of these values:
+  first_day.DaysBetween(last_day)
+    Which is: 4916830
+  98
+Days between is not calculated properly</pre>
 
 
++ :x:  Check that a GoogleTest test passes.
+    fails the test: DateTest.EpochConstructorTest.
+<pre>
+[ RUN      ] DateTest.EpochConstructorTest
+date_unittest.cc:88: Failure
+Expected equality of these values:
+  first_day.GetUsDate()
+    Which is: "204001-01"
+  "01-01-1970"
+First day of class not setup properly
+date_unittest.cc:89: Failure
+Expected equality of these values:
+  last_day.GetUsDate()
+    Which is: "210801-19"
+  "02-05-2038"
+Last day of class not setup properly</pre>
 
-+ :heavy_check_mark:  Check that a GoogleTest test passes.
-    passes the test: DateTest.DaysBetweenTests.
 
-
-
-+ :heavy_check_mark:  100.0% of the tests passed. Expected at least 100%.
++ :x:  0.0% of the tests passed, but the target is 100%.
 
 ---
 
 
 ### Testing Mutants
 
-
-#### Testing _mutant_epoch_constructor_year_ for failure
-
-+ :heavy_check_mark:  Change into directory ".".
-
-+ :heavy_check_mark:  Check that make clean compiles.
-
-
-
-+ :heavy_check_mark:  Check that make  compiles.
-
-
-
-+ :heavy_check_mark:  Check that make test compiles.
-
-
-
-+ :heavy_check_mark:  Dynamic Check that file exists.
-
-+ :x:  There is no test case for mutant_epoch_constructor_year (since all tests pass).
-   - Reason - Dates constructed with epoch are about 70 years in the future
-
-+ :heavy_check_mark:  Check that make clean compiles.
-
-
-
-+ :heavy_check_mark:  Change into directory ".".
-
----
-
-
-#### Testing _mutant_constructor_no_add_1900_assess_new_ for failure
-
-+ :heavy_check_mark:  Change into directory ".".
-
-+ :heavy_check_mark:  Check that make clean compiles.
-
-
-
-+ :heavy_check_mark:  Check that make  compiles.
-
-
-
-+ :heavy_check_mark:  Check that make test compiles.
-
-
-
-+ :heavy_check_mark:  Dynamic Check that file exists.
-
-+ :x:  There is no test case for mutant_constructor_no_add_1900_assess_new (since all tests pass).
-   - Reason - Date which should be Jan 1, 2000 is actually Jan 1, 100.
-
-+ :heavy_check_mark:  Check that make clean compiles.
-
-
-
-+ :heavy_check_mark:  Change into directory ".".
-
----
-
-
-#### Testing _mutant_op_minus_arithmetic_ for failure
-
-+ :heavy_check_mark:  Change into directory ".".
-
-+ :heavy_check_mark:  Check that make clean compiles.
-
-
-
-+ :heavy_check_mark:  Check that make  compiles.
-
-
-
-+ :heavy_check_mark:  Check that make test compiles.
-
-
-
-+ :heavy_check_mark:  Dynamic Check that file exists.
-
-+ :x:  There is no test case for mutant_op_minus_arithmetic (since all tests pass).
-   - Reason - operator-: Probably a copy paste error
-
-+ :heavy_check_mark:  Check that make clean compiles.
-
-
-
-+ :heavy_check_mark:  Change into directory ".".
-
----
-
-
-#### Testing _mutant_get_date_separator_omit_ for failure
-
-+ :heavy_check_mark:  Change into directory ".".
-
-+ :heavy_check_mark:  Check that make clean compiles.
-
-
-
-+ :heavy_check_mark:  Check that make  compiles.
-
-
-
-+ :heavy_check_mark:  Check that make test compiles.
-
-
-
-+ :heavy_check_mark:  Dynamic Check that file exists.
-
-+ :x:  There is no test case for mutant_get_date_separator_omit (since all tests pass).
-   - Reason - Dates from GetDate are missing a character
-
-+ :heavy_check_mark:  Check that make clean compiles.
-
-
-
-+ :heavy_check_mark:  Change into directory ".".
-
----
-
-
-#### Testing _mutant_days_between_no_leap_ for failure
-
-+ :heavy_check_mark:  Change into directory ".".
-
-+ :heavy_check_mark:  Check that make clean compiles.
-
-
-
-+ :heavy_check_mark:  Check that make  compiles.
-
-
-
-+ :heavy_check_mark:  Check that make test compiles.
-
-
-
-+ :heavy_check_mark:  Dynamic Check that file exists.
-
-+ :x:  There is no test case for mutant_days_between_no_leap (since all tests pass).
-   - Reason - 1/1/2016 to 3/1/2016 is 60 days, but this version returns 59
-
-+ :heavy_check_mark:  Check that make clean compiles.
-
-
-
-+ :heavy_check_mark:  Change into directory ".".
-
----
-
-
-#### Testing _mutant_days_between_arithmetic_ for failure
-
-+ :heavy_check_mark:  Change into directory ".".
-
-+ :heavy_check_mark:  Check that make clean compiles.
-
-
-
-+ :heavy_check_mark:  Check that make  compiles.
-
-
-
-+ :heavy_check_mark:  Check that make test compiles.
-
-
-
-+ :heavy_check_mark:  Dynamic Check that file exists.
-
-+ :heavy_check_mark:  At least one test failed for mutant_days_between_arithmetic
-
-+ :heavy_check_mark:  Check that make clean compiles.
-
-
-
-+ :heavy_check_mark:  Change into directory ".".
-
----
-
-
-#### Testing _mutant_get_us_date_wrong_format_ for failure
-
-+ :heavy_check_mark:  Change into directory ".".
-
-+ :heavy_check_mark:  Check that make clean compiles.
-
-
-
-+ :heavy_check_mark:  Check that make  compiles.
-
-
-
-+ :heavy_check_mark:  Check that make test compiles.
-
-
-
-+ :heavy_check_mark:  Dynamic Check that file exists.
-
-+ :heavy_check_mark:  At least one test failed for mutant_get_us_date_wrong_format
-
-+ :heavy_check_mark:  Check that make clean compiles.
-
-
-
-+ :heavy_check_mark:  Change into directory ".".
-
----
-
-
-#### Testing _mutant_days_between_abs_assess_ for failure
-
-+ :heavy_check_mark:  Change into directory ".".
-
-+ :heavy_check_mark:  Check that make clean compiles.
-
-
-
-+ :heavy_check_mark:  Check that make  compiles.
-
-
-
-+ :heavy_check_mark:  Check that make test compiles.
-
-
-
-+ :heavy_check_mark:  Dynamic Check that file exists.
-
-+ :heavy_check_mark:  At least one test failed for mutant_days_between_abs_assess
-
-+ :heavy_check_mark:  Check that make clean compiles.
-
-
-
-+ :heavy_check_mark:  Change into directory ".".
-
----
-
-
-#### Testing _mutant_days_between_return_1_assess_new_ for failure
-
-+ :heavy_check_mark:  Change into directory ".".
-
-+ :heavy_check_mark:  Check that make clean compiles.
-
-
-
-+ :heavy_check_mark:  Check that make  compiles.
-
-
-
-+ :heavy_check_mark:  Check that make test compiles.
-
-
-
-+ :heavy_check_mark:  Dynamic Check that file exists.
-
-+ :heavy_check_mark:  At least one test failed for mutant_days_between_return_1_assess_new
-
-+ :heavy_check_mark:  Check that make clean compiles.
-
-
-
-+ :heavy_check_mark:  Change into directory ".".
-
----
-
-+ :x:  44.44% of the tests passed, but the target is 93%.
++ :x:  No tests available.
 
 ---
 
