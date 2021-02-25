@@ -1,6 +1,6 @@
 ### Fuller Feedback for Lab 09
 
-Run on February 25, 00:08:49 AM.
+Run on February 25, 00:15:23 AM.
 
 + :heavy_check_mark:  Run git ls-remote to check for existence of specific branch- Branch master found
 
@@ -103,16 +103,9 @@ Run on February 25, 00:08:49 AM.
 
 
 
-+ :x:  Check that a GoogleTest test passes.
-    fails the test: DateTest.mutant_constructor_no_add_1900_assess_new.
-<pre>
-[ RUN      ] DateTest.mutant_constructor_no_add_1900_assess_new
-date_unittest.cc:95: Failure
-Expected equality of these values:
-  first_day.GetUsDate()
-    Which is: "12-31-1999"
-  "01-01-2000"
-The date Jan 01, 2000 is incorrectly initialized.</pre>
++ :heavy_check_mark:  Check that a GoogleTest test passes.
+    passes the test: DateTest.mutant_constructor_no_add_1900_assess_new.
+
 
 
 + :heavy_check_mark:  Check that a GoogleTest test passes.
@@ -140,7 +133,7 @@ The date Jan 01, 2000 is incorrectly initialized.</pre>
 
 
 
-+ :x:  90.0% of the tests passed, but the target is 100%.
++ :heavy_check_mark:  100.0% of the tests passed. Expected at least 100%.
 
 ---
 
