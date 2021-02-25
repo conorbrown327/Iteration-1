@@ -92,7 +92,7 @@ TEST_F(DateTest, mutant_constructor_no_add_1900_assess_new) {
   first_day = Date(1999, 12, 31);
   last_day = first_day + 1;
 
-  EXPECT_EQ(first_day.GetUsDate(), "01-01-2000") << "The date Jan 01, 2000 is incorrectly initialized.";
+  EXPECT_EQ(last_day.GetUsDate(), "01-01-2000") << "The date Jan 01, 2000 is incorrectly initialized.";
 }
 
 TEST_F(DateTest, mutant_op_minus_arithmetic) {
