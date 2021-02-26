@@ -12,13 +12,13 @@ DeliverySimulation::~DeliverySimulation() {}
 IEntity* DeliverySimulation::CreateEntity(const picojson::object& val) {
   //TODO for lab10: replace the ?????'s with the appropriate values,
   //  then uncomment the section of code
-  /*
-  if (JsonHelper::GetString(val, "????") == "drone") {
+  
+  if (JsonHelper::GetString(val, "drone/customer/package") == "drone") {
     std::vector<float> position = JsonHelper::GetStdFloatVector(val, "????????");
     std::vector<float> direction = JsonHelper::GetStdFloatVector(val, "????????");
     return new Drone(????, ????, ????);
   }
-  */
+  
   return NULL;
 }
 
@@ -26,6 +26,7 @@ void DeliverySimulation::AddFactory(IEntityFactory* factory) {}
 
 void DeliverySimulation::AddEntity(IEntity* entity) { 
   //TODO for lab10: One line of code
+	entities_.push_back(entity);
 }
 
 void DeliverySimulation::SetGraph(const IGraph* graph) {}
