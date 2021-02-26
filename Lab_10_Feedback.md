@@ -1,6 +1,6 @@
 ### Feedback for Lab 10
 
-Run on February 26, 16:49:59 PM.
+Run on February 26, 17:03:28 PM.
 
 + :heavy_check_mark:  Run git ls-remote to check for existence of specific branch- Branch devel found
 
@@ -44,8 +44,8 @@ Run on February 26, 16:49:59 PM.
 mkdir -p /project/grades/Spring-2021/csci3081/student-repos/Lab_10_Feedback/repo-brow4339-build/lib
 /soft/gcc/7.1.0/Linux_x86_64/bin/g++ -MM -MF /project/grades/Spring-2021/csci3081/student-repos/Lab_10_Feedback/repo-brow4339-build/obj/main.d -MP -MT /project/grades/Spring-2021/csci3081/student-repos/Lab_10_Feedback/repo-brow4339-build/obj/main.o -std=c++11 -g -fPIC  -I.. -I/project/grades/Spring-2021/csci3081/dependencies/include -Isrc -I. -I/project/grades/Spring-2021/csci3081/dependencies/include -Iinclude -I. src/main.cc
 /soft/gcc/7.1.0/Linux_x86_64/bin/g++ -MM -MF /project/grades/Spring-2021/csci3081/student-repos/Lab_10_Feedback/repo-brow4339-build/obj/project_settings.d -MP -MT /project/grades/Spring-2021/csci3081/student-repos/Lab_10_Feedback/repo-brow4339-build/obj/project_settings.o -std=c++11 -g -fPIC  -I.. -I/project/grades/Spring-2021/csci3081/dependencies/include -Isrc -I. -I/project/grades/Spring-2021/csci3081/dependencies/include -Iinclude -I. src/config/project_settings.cc
-mkdir -p /project/grades/Spring-2021/csci3081/student-repos/Lab_10_Feedback/repo-brow4339-build/bin
 mkdir -p /project/grades/Spring-2021/csci3081/student-repos/Lab_10_Feedback/repo-brow4339/.dependencies
+mkdir -p /project/grades/Spring-2021/csci3081/student-repos/Lab_10_Feedback/repo-brow4339-build/bin
 rsync -au /project/grades/Spring-2021/csci3081/dependencies/include /project/grades/Spring-2021/csci3081/student-repos/Lab_10_Feedback/repo-brow4339/.dependencies/
 src/delivery_simulation.cc:4:10: fatal error: drone.h: No such file or directory
  #include "drone.h"
@@ -53,8 +53,8 @@ src/delivery_simulation.cc:4:10: fatal error: drone.h: No such file or directory
 compilation terminated.
 make: *** [Makefile:29: /project/grades/Spring-2021/csci3081/student-repos/Lab_10_Feedback/repo-brow4339-build/obj/delivery_simulation.o] Error 1
 make: *** Waiting for unfinished jobs....
-/soft/gcc/7.1.0/Linux_x86_64/bin/g++ -std=c++11 -g -fPIC  -I.. -I/project/grades/Spring-2021/csci3081/dependencies/include -Isrc -I. -I/project/grades/Spring-2021/csci3081/dependencies/include -Iinclude -I. -c src/config/project_settings.cc -o /project/grades/Spring-2021/csci3081/student-repos/Lab_10_Feedback/repo-brow4339-build/obj/project_settings.o
 /soft/gcc/7.1.0/Linux_x86_64/bin/g++ -std=c++11 -g -fPIC  -I.. -I/project/grades/Spring-2021/csci3081/dependencies/include -Isrc -I. -I/project/grades/Spring-2021/csci3081/dependencies/include -Iinclude -I. -c src/main.cc -o /project/grades/Spring-2021/csci3081/student-repos/Lab_10_Feedback/repo-brow4339-build/obj/main.o
+/soft/gcc/7.1.0/Linux_x86_64/bin/g++ -std=c++11 -g -fPIC  -I.. -I/project/grades/Spring-2021/csci3081/dependencies/include -Isrc -I. -I/project/grades/Spring-2021/csci3081/dependencies/include -Iinclude -I. -c src/config/project_settings.cc -o /project/grades/Spring-2021/csci3081/student-repos/Lab_10_Feedback/repo-brow4339-build/obj/project_settings.o
 rsync -au /project/grades/Spring-2021/csci3081/dependencies/share/EntityProject/models web/
 rsync -au /project/grades/Spring-2021/csci3081/dependencies/share/EntityProject/textures web/
 rsync -au /project/grades/Spring-2021/csci3081/dependencies/share/EntityProject/data ./
