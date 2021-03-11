@@ -3,11 +3,11 @@
 
 namespace csci3081 {
 
-class Package : public csci3081::EntityBase {
+/*class Vector3d : public csci3081::EntityBase {
  public:
-    Package();
+    Vector3d();
 
   private:
-};
+};*/
 
 }

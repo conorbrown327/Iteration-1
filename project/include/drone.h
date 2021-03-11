@@ -24,13 +24,13 @@ class Drone : public csci3081::EntityBase {
 
   bool IsDynamic() const;
 
-  //TODO for lab10: What member variables are needed?
-  // should they be private or public?
+  
 
   private:
    std::string name;
    std::vector<float> position;
-   std::vector<float> orientation; 
+   std::vector<float> orientation;
+   Battery *battery_ = new Battery();
 };
 
 }
