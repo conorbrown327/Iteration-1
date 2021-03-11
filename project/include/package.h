@@ -2,7 +2,7 @@
 #define PACKAGE_H
 
 #include "customer.h"
-//#include "vector3d.h"
+#include "vector3d.h"
 #include <vector>
 #include <string>
 
