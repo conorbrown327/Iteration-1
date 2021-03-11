@@ -1,14 +1,20 @@
-#include "entity_base.h"
-#include <vector>
+/*#include <vector>
 #include <string>
+#include "vector3d.h"
 
-namespace csci3081 {
+namespace csci3081 
+{
 
-class Customer : public csci3081::EntityBase {
+class Customer
+{
  public:
     Customer();
 
+    void SetLocation(Vector3d location);
+    Vector3d GetLocation();
+
   private:
+    Vector3d location;
 };
 
-}
+}*/
