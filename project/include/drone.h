@@ -1,4 +1,5 @@
 #include "entity_base.h"
+#include "battery.h"
 #include <vector>
 #include <string>
 

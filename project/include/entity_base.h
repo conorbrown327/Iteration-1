@@ -8,6 +8,7 @@
  * Includes
  ******************************************************************************/
 #include <EntityProject/facade/delivery_system.h>
+#include "vector3d.h"
 
 namespace csci3081 {
 
