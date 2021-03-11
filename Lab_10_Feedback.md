@@ -1,27 +1,29 @@
 ### Feedback for Lab 10
 
-Run on February 26, 16:10:32 PM.
+Run on February 26, 17:05:00 PM.
 
-+ :x:  Run git ls-remote to check for existence of specific branch- Branch devel not found
++ :heavy_check_mark:  Run git ls-remote to check for existence of specific branch- Branch devel found
 
-+ :leftwards_arrow_with_hook:  Checkout devel branch. (Test not run because of an earlier failing test)
++ :heavy_check_mark:  Checkout devel branch.
+
+
 
 
 #### Necessary Files and Structure
 
-+ :leftwards_arrow_with_hook:  Check that directory "project" exists. (Test not run because of an earlier failing test)
++ :heavy_check_mark:  Check that directory "project" exists.
 
-+ :leftwards_arrow_with_hook:  Check that directory "project/bin" exists. (Test not run because of an earlier failing test)
++ :heavy_check_mark:  Check that directory "project/bin" exists.
 
-+ :leftwards_arrow_with_hook:  Check that directory "project/docs" exists. (Test not run because of an earlier failing test)
++ :heavy_check_mark:  Check that directory "project/docs" exists.
 
-+ :leftwards_arrow_with_hook:  Check that directory "project/src" exists. (Test not run because of an earlier failing test)
++ :heavy_check_mark:  Check that directory "project/src" exists.
 
-+ :leftwards_arrow_with_hook:  Check that directory "project/tests" exists. (Test not run because of an earlier failing test)
++ :heavy_check_mark:  Check that directory "project/tests" exists.
 
-+ :leftwards_arrow_with_hook:  Check that directory "project/web" exists. (Test not run because of an earlier failing test)
++ :heavy_check_mark:  Check that directory "project/web" exists.
 
-+ :leftwards_arrow_with_hook:  Check that file "project/Makefile" exists. (Test not run because of an earlier failing test)
++ :heavy_check_mark:  Check that file "project/Makefile" exists.
 
 ---
 
@@ -45,14 +47,14 @@ mkdir -p /project/grades/Spring-2021/csci3081/student-repos/Lab_10_Feedback/repo
 mkdir -p /project/grades/Spring-2021/csci3081/student-repos/Lab_10_Feedback/repo-brow4339/.dependencies
 mkdir -p /project/grades/Spring-2021/csci3081/student-repos/Lab_10_Feedback/repo-brow4339-build/bin
 rsync -au /project/grades/Spring-2021/csci3081/dependencies/include /project/grades/Spring-2021/csci3081/student-repos/Lab_10_Feedback/repo-brow4339/.dependencies/
-/soft/gcc/7.1.0/Linux_x86_64/bin/g++ -std=c++11 -g -fPIC  -I.. -I/project/grades/Spring-2021/csci3081/dependencies/include -Isrc -I. -I/project/grades/Spring-2021/csci3081/dependencies/include -Iinclude -I. -c src/config/project_settings.cc -o /project/grades/Spring-2021/csci3081/student-repos/Lab_10_Feedback/repo-brow4339-build/obj/project_settings.o
 src/delivery_simulation.cc:4:10: fatal error: drone.h: No such file or directory
  #include "drone.h"
           ^~~~~~~~~
 compilation terminated.
-make: *** [Makefile:29: /project/grades/Spring-2021/csci3081/student-repos/Lab_10_Feedback/repo-brow4339-build/obj/delivery_simulation.o] Error 1
-make: *** Waiting for unfinished jobs....
+/soft/gcc/7.1.0/Linux_x86_64/bin/g++ -std=c++11 -g -fPIC  -I.. -I/project/grades/Spring-2021/csci3081/dependencies/include -Isrc -I. -I/project/grades/Spring-2021/csci3081/dependencies/include -Iinclude -I. -c src/config/project_settings.cc -o /project/grades/Spring-2021/csci3081/student-repos/Lab_10_Feedback/repo-brow4339-build/obj/project_settings.o
 /soft/gcc/7.1.0/Linux_x86_64/bin/g++ -std=c++11 -g -fPIC  -I.. -I/project/grades/Spring-2021/csci3081/dependencies/include -Isrc -I. -I/project/grades/Spring-2021/csci3081/dependencies/include -Iinclude -I. -c src/main.cc -o /project/grades/Spring-2021/csci3081/student-repos/Lab_10_Feedback/repo-brow4339-build/obj/main.o
+make: *** [Makefile:30: /project/grades/Spring-2021/csci3081/student-repos/Lab_10_Feedback/repo-brow4339-build/obj/delivery_simulation.o] Error 1
+make: *** Waiting for unfinished jobs....
 rsync -au /project/grades/Spring-2021/csci3081/dependencies/share/EntityProject/models web/
 rsync -au /project/grades/Spring-2021/csci3081/dependencies/share/EntityProject/textures web/
 rsync -au /project/grades/Spring-2021/csci3081/dependencies/share/EntityProject/data ./
