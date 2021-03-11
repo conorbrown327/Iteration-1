@@ -1,3 +1,6 @@
+#ifndef VECTOR_H
+#define VECTOR_H
+
 #include <vector>
 #include <string>
 
@@ -23,3 +26,5 @@ class Vector3d{
 };
 
 }
+
+#endif  // VECTOR_H
