@@ -6,8 +6,8 @@ Drone::Drone(std::vector<float> position, std::vector<float> direction,
                                         const picojson::object& details) {
   // TODO for lab10: store the position and direction vectors.
 name = "name";
-this.position = position;
-this.orientation = direction;
+this->position = position;
+this->orientation = direction;
   // The following line saves the json object in the details_ member variable
   // from the EntityBase class, in order to return it later in GetDetails()
   details_ = details;
