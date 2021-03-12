@@ -4,6 +4,7 @@ namespace csci3081 {
 
 Drone::Drone()
 {
+  name = "name";
   std::vector<float> position (3);
   std::fill(position.begin(), position.end(), 0);
   std::vector<float> direction (3);
