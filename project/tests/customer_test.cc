@@ -1,4 +1,3 @@
-/*
 #include "gtest/gtest.h"
 #include "customer.h"
 #include <iostream>
@@ -6,7 +5,7 @@
 namespace csci3081 
 {
 
-class DefaultCustomerTest : public ::testing::Test 
+class CustomerTest : public ::testing::Test 
 { 
   public:
     virtual void SetUp() 
@@ -21,9 +20,40 @@ class DefaultCustomerTest : public ::testing::Test
 /*******************************************************************************
  * Test Cases
  ******************************************************************************/
-/*
-TEST_F(DefaultBatteryTest, BatteryCreated) {
-  ASSERT_EQ(Vector3d(), c->GetLocation());
+
+
+TEST_F(CustomerTest, CustomerContructorTest) 
+{
+  ASSERT_NE(nullptr, c);
+}
+TEST_F(CustomerTest, GetPositionTest) 
+{
+  ASSERT_NE(nullptr, c->GetPosition());
 }
 
-} */// namespcae csci3081 
+TEST_F(CustomerTest, GetNameTest) 
+{
+    ASSERT_EQ("name", c->GetName());
+}
+
+TEST_F(CustomerTest, GetIdTest) 
+{
+    ASSERT_EQ(0, c->GetId());
+}
+
+TEST_F(CustomerTest, GetRadiusTest) 
+{
+    ASSERT_EQ(1, c->GetRadius());
+}
+
+TEST_F(CustomerTest, GetVersionTest) 
+{
+    ASSERT_EQ(0, c->GetVersion());
+}
+
+TEST_F(CustomerTest, IsDynamicTest) 
+{
+    ASSERT_EQ(true, c->IsDynamic());
+}
+
+} // namespcae csci3081 

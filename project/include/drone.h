@@ -1,3 +1,6 @@
+#ifndef DRONE_H
+#define DRONE_H
+
 #include "entity_base.h"
 #include "battery.h"
 #include <vector>
@@ -25,8 +28,6 @@ class Drone : public csci3081::EntityBase {
 
   bool IsDynamic() const;
 
-  
-
   private:
    std::string name;
    std::vector<float> position;
@@ -35,3 +36,5 @@ class Drone : public csci3081::EntityBase {
 };
 
 }
+
+#endif  // DRONE_H

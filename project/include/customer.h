@@ -4,19 +4,31 @@
 #include <vector>
 #include <string>
 #include "vector3d.h"
+//#include "entity_base.h"
 
 namespace csci3081 
 {
 
-class Customer{
+class Customer /*: public csci3081::EntityBase*/{
  public:
     Customer();
 
-    void SetLocation(Vector3d *location);
-    Vector3d GetLocation();
+    const std::string& GetName();
+
+    int GetId() const;
+
+    float GetRadius() const;
+
+    int GetVersion() const;
+
+    bool IsDynamic() const;
+
+    void SetPosition(Vector3d *position);
+    Vector3d* GetPosition();
 
   private:
-    Vector3d *location;
+    std::string name;
+    Vector3d *position;
 };
 
 }

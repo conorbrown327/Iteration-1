@@ -4,9 +4,9 @@ namespace csci3081 {
 
 Vector3d::Vector3d()
 {
-    x = 0;
-    y = 0;
-    z = 0;
+    x = 0.0;
+    y = 0.0;
+    z = 0.0;
 }
 
 Vector3d::Vector3d(float x, float y, float z)
