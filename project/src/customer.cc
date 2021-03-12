@@ -1,18 +1,12 @@
-/*#include "customer.h"
+#include "customer.h"
 #include "vector3d.h"
 
 namespace csci3081 {
-
 Customer::Customer()
 {
-    location = Vector3d::Vector3d();
+    location = new Vector3d();
 }
 
-Customer::Customer(Vector3d location)
-{
-    this->location = location;
+void Customer::SetLocation(Vector3d *location) {this->location = location;}
+Vector3d Customer::GetLocation() {return *location;}
 }
-
-void SetLocation(float location) {this->location = location;}
-Vector3d::Vector3d GetLocation() {return location;}
-}*/

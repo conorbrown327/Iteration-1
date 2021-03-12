@@ -1,20 +1,24 @@
-/*#include <vector>
+#ifndef CUSTOMER_H
+#define CUSTOMER_H
+
+#include <vector>
 #include <string>
 #include "vector3d.h"
 
 namespace csci3081 
 {
 
-class Customer
-{
+class Customer{
  public:
     Customer();
 
-    void SetLocation(Vector3d location);
+    void SetLocation(Vector3d *location);
     Vector3d GetLocation();
 
   private:
-    Vector3d location;
+    Vector3d *location;
 };
 
-}*/
+}
+
+#endif  // CUSTOMER_H
