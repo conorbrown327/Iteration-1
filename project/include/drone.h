@@ -8,6 +8,7 @@ namespace csci3081 {
 class Drone : public csci3081::EntityBase {
   // TODO: Add documentation to these functions
  public:
+  Drone();
   Drone(std::vector<float> pos, std::vector<float> direction, const picojson::object& obj);
 
   int GetId() const;
@@ -29,7 +30,7 @@ class Drone : public csci3081::EntityBase {
   private:
    std::string name;
    std::vector<float> position;
-   std::vector<float> orientation;
+   std::vector<float> direction;
    Battery *battery_ = new Battery();
 };
 

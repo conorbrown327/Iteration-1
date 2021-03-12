@@ -2,12 +2,21 @@
 
 namespace csci3081 {
 
+Drone::Drone()
+{
+  std::vector<float> position (3);
+  std::fill(position.begin(), position.end(), 0);
+  std::vector<float> direction (3);
+  std::fill(direction.begin(), direction.end(), 0);
+  this->position = position;
+  this->direction = direction;
+}
 Drone::Drone(std::vector<float> position, std::vector<float> direction, 
                                         const picojson::object& details) {
   // TODO for lab10: store the position and direction vectors.
 name = "name";
 this->position = position;
-this->orientation = direction;
+this->direction = direction;
   // The following line saves the json object in the details_ member variable
   // from the EntityBase class, in order to return it later in GetDetails()
   details_ = details;
@@ -30,7 +39,7 @@ const std::vector<float>& Drone::GetPosition() const {
 
 const std::vector<float>& Drone::GetDirection() const {
   // TODO for lab10: what should this return?
-  return orientation;
+  return direction;
 }
 
 float Drone::GetRadius() const {
