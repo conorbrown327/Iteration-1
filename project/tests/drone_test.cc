@@ -1,24 +1,16 @@
 #include "gtest/gtest.h"
-#include <EntityProject/project_settings.h>
-#include "../include/delivery_simulation.h"
-#include <EntityProject/entity.h>
-#include "json_helper.h"
 #include <iostream>
 #include <vector>
-#include "../include/drone.h"
+#include "drone.h"
 
 namespace csci3081 
 {
 
-using entity_project::IEntity;
-
-class ConstructorDroneTest : public ::testing::Test 
+class DroneTest : public ::testing::Test 
 { 
   public:
     virtual void SetUp() 
     {
-        const picojson::object& details = new JsonHelper::CreateJsonObject();
-
         d = new Drone();
     }
 
@@ -30,7 +22,18 @@ class ConstructorDroneTest : public ::testing::Test
  * Test Cases
  ******************************************************************************/
 
-TEST_F(ConstuctorDroneTest, DroneCreated) {
+TEST_F(DroneTest, DefaultDroneConstructed) {
+    for(auto i = d->GetPosition().begin(); i != d->GetPosition().end(); i++)
+    {
+        ASSERT_FLOAT_EQ(0.0, *i);
+    }
+    for(auto i = d->GetDirection().begin(); i != d->GetDirection().end(); i++)
+    {
+        ASSERT_FLOAT_EQ(0.0, *i);
+    }
+}
+
+TEST_F(DroneTest, GetPositionTest) {
     
 }
 
