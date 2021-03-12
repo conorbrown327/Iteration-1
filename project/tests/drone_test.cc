@@ -22,19 +22,50 @@ class DroneTest : public ::testing::Test
  * Test Cases
  ******************************************************************************/
 
-TEST_F(DroneTest, DefaultDroneConstructed) {
+TEST_F(DroneTest, DefaultDroneConstructed) 
+{
+    ASSERT_NE(nullptr, d);
+}
+
+TEST_F(DroneTest, GetNameTest) 
+{
+    ASSERT_EQ("name", d->GetName());
+}
+
+TEST_F(DroneTest, GetPositionTest) 
+{
     for(auto i = d->GetPosition().begin(); i != d->GetPosition().end(); i++)
     {
         ASSERT_FLOAT_EQ(0.0, *i);
     }
+}
+
+TEST_F(DroneTest, GetDirectionTest)
+{
     for(auto i = d->GetDirection().begin(); i != d->GetDirection().end(); i++)
     {
         ASSERT_FLOAT_EQ(0.0, *i);
     }
 }
 
-TEST_F(DroneTest, GetPositionTest) {
-    
+TEST_F(DroneTest, GetIdTest) 
+{
+    ASSERT_EQ(0, d->GetId());
+}
+
+TEST_F(DroneTest, GetRadiusTest) 
+{
+    ASSERT_EQ(1, d->GetRadius());
+}
+
+TEST_F(DroneTest, GetVersionTest) 
+{
+    ASSERT_EQ(0, d->GetVersion());
+}
+
+TEST_F(DroneTest, IsDynamicTest) 
+{
+    ASSERT_EQ(true, d->IsDynamic());
 }
 
 } // namespcae csci3081
