@@ -10,7 +10,7 @@ Customer::Customer()
     position = new Vector3d();
 }
 
-const std::string& Customer::GetName() {
+/*const std::string& Customer::GetName() {
   // TODO for lab10: What should this return?
   return name;
 }
@@ -36,6 +36,6 @@ bool Customer::IsDynamic() const {
 }
 
 void Customer::SetPosition(Vector3d *position) {this->position = position;}
-Vector3d* Customer::GetPosition() {return position;}
+Vector3d* Customer::GetPosition() {return position;}*/
 
 }  // namespace csci3081

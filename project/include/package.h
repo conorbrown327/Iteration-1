@@ -4,7 +4,7 @@
  #ifndef PACKAGE_H
 #define PACKAGE_H
 
-//#include "entity_base.h"
+#include "entity_base.h"
 //#include "customer.h"
 #include "vector3d.h"
 #include <vector>
@@ -20,7 +20,7 @@ namespace csci3081 {
  * Package inherits from EntityBase. It's only unique attribute is a weight
  * to determine the drone's speed when delivering the package.
  */
-class Package /*: public csci3081::EntityBase*/{
+class Package : public csci3081::EntityBase{
   public:
     Package();
 
