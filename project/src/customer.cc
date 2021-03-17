@@ -1,7 +1,9 @@
 #include "customer.h"
 #include "vector3d.h"
 
-namespace csci3081 {
+namespace csci3081 
+{
+
 Customer::Customer()
 {
     name = "name";
@@ -35,4 +37,5 @@ bool Customer::IsDynamic() const {
 
 void Customer::SetPosition(Vector3d *position) {this->position = position;}
 Vector3d* Customer::GetPosition() {return position;}
-}
+
+}  // namespace csci3081

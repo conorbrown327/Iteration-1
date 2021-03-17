@@ -1,8 +1,7 @@
 /*! \mainpage CSCI 3081 Delivery Simulation project
-*
-* This file is currently a stub. To view project startup instructions, check Lab 10
-*
-* To generate documentation, first build the project with `make` in the `project` directory.
-* Next, navigate to `project/docs` and run `doxygen Doxyfile`.
-* Then open `project/docs/html/index.html` in your web browser to view the documentation.
+* 
+* This Doxygen page includes all relavent info about classes and structure to
+* the CSCI 3081w drone simulation project.
+* 
+* @author Conor Brown, brow4339
 */

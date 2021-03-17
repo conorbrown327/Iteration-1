@@ -1,3 +1,6 @@
+/**
+ *@file battery.cc
+ */
 #include "battery.h"
 
 namespace csci3081 {
