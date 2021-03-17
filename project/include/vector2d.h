@@ -14,6 +14,10 @@ class Vector2d
         Vector2d();
         Vector2d(float x, float y);
 
+        float GetDirection();
+        float getMagnitude();
+        void Normalize();
+
         float GetX();
         void SetX(float x);
         float GetY();
