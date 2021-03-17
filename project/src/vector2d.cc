@@ -15,7 +15,7 @@ Vector2d::Vector2d(float x, float y)
 }
 
 float Vector2d::GetDirection() {return 0.0;}
-float Vector2d::getMagnitude() {return 0.0;}
+float Vector2d::GetMagnitude() {return 0.0;}
 void Vector2d::Normalize() {;}
 
 float Vector2d::GetX() {return x_;}

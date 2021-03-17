@@ -15,7 +15,7 @@ class Vector2d
         Vector2d(float x, float y);
 
         float GetDirection();
-        float getMagnitude();
+        float GetMagnitude();
         void Normalize();
 
         float GetX();
