@@ -4,14 +4,18 @@ namespace csci3081 {
 
 Vector2d::Vector2d()
 {
-    this->vec = new Vector3d(0.0, 0.0, 0.0);
+    x_ = 0.0;
+    y_ = 0.0;
 }
 
-Vector2d::Vector2d(float x, float z)
+Vector2d::Vector2d(float x, float y)
 {
-    this->vec = new Vector3d(x, 0.0, z);
+    x_ = x;
+    y_ = y;
 }
 
-Vector3d* Vector2d::GetVec() {return vec;}
-void Vector2d::SetVec(Vector3d* vec) {this->vec = vec;}
+float Vector2d::GetX() {return x_;}
+void Vector2d::SetX(float x) {x_ = x;}
+float Vector2d::GetY() {return y_;}
+void Vector2d::SetY(float y) {y_ = y;}
 }

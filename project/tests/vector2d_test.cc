@@ -22,15 +22,19 @@ class Vector2dTest : public ::testing::Test
  ******************************************************************************/
 
 
-TEST_F(Vector2dTest, Vector3dContructorTest) 
+TEST_F(Vector2dTest, Vector2dContructorTest) 
 {
   ASSERT_NE(nullptr, v);
 }
 
-TEST_F(Vector2dTest, GetVecTest) 
+TEST_F(Vector2dTest, GetXTest) 
 {
-  ASSERT_NE(nullptr, v->GetVec());
+  ASSERT_EQ(0.0, v->GetX());
 }
 
+TEST_F(Vector2dTest, GetYTest) 
+{
+  ASSERT_EQ(0.0, v->GetY());
+}
 
 } // namespcae csci3081 
