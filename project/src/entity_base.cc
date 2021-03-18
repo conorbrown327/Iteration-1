@@ -1,25 +1,29 @@
-/*#include <EntityProject/facade/delivery_system.h>
-#include "vector3d.h"
+#include "entity_base.h"
 
 namespace csci3081 
 {
 
-    const std::string& GetName() { return name_; }
-    void SetName(std::string name) { name_ = name; }
+    const std::string& EntityBase::GetName() { return name_; }
+    void EntityBase::SetName(std::string name) { name_ = name; }
 
-    int GetId() const { return id_; }
-    void SetId(int id) { id_ = id; }
+    int EntityBase::GetId() const { return id_; }
+    void EntityBase::SetId(int id) { id_ = id; }
 
-    float GetRadius() const { return radius_; }
-    void SetRadius(float radius) { radius_ = radius; }
+    float EntityBase::GetRadius() const { return radius_; }
+    void EntityBase::SetRadius(float radius) { radius_ = radius; }
 
-    int GetVersion() const { return version_; }
-    void setVersion(int version) { version_ = version; }
+    const std::vector<float>& EntityBase::GetDirection() const { return direction_; }
+    const void EntityBase::SetDirection(std::vector<float> direction) { direction_ = direction; }
 
-    bool IsDynamic() const { return dynamic_; }
-    void SetDynamic(bool dynamic) { dynamic_ = dynamic; }
+    const std::vector<float>& EntityBase::GetPosition() const { return position_; }
+    const void EntityBase::SetPosition(std::vector<float> position) { position_ = position; }
 
-    const picojson::object GetDetails() { return details_; }
+    int EntityBase::GetVersion() const { return version_; }
+    void EntityBase::SetVersion(int version) { version_ = version; }
+
+    bool EntityBase::IsDynamic() const { return dynamic_; }
+    void EntityBase::SetDynamic(bool dynamic) { dynamic_ = dynamic; }
+
+    const picojson::object& EntityBase::GetDetails() { return details_; }
 
 }  // namespace csci3081
-*/

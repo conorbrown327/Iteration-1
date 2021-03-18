@@ -25,30 +25,11 @@ namespace csci3081 {
  * Battery to keep track of the drone's battery charge.
  */
 class Drone : public csci3081::EntityBase {
-  // TODO: Add documentation to these functions
- public:
-  Drone();
-  Drone(std::vector<float> pos, std::vector<float> direction, const picojson::object& obj);
-
-  int GetId() const;
-
-  const std::string& GetName();
-
-  const std::vector<float>& GetPosition() const;
-
-  const std::vector<float>& GetDirection() const;
-
-  float GetRadius() const;
-
-  int GetVersion() const;
-
-  bool IsDynamic() const;
-
+  public:
+    //Drone();
+    Drone(std::vector<float> pos, std::vector<float> direction, const picojson::object& obj);
   private:
-   std::string name;
-   std::vector<float> position;
-   std::vector<float> direction;
-   Battery *battery_ = new Battery();
+    Battery *battery_;
 };
 
 }  // namespace csci3081

@@ -8,7 +8,7 @@
  * Includes
  ******************************************************************************/
 #include <EntityProject/facade/delivery_system.h>
-#include "vector3d.h"
+#include <vector>
 #include <string>
 
 namespace csci3081 {
@@ -29,31 +29,37 @@ class EntityBase : public IEntity {
   public:
     virtual ~EntityBase() {}
 
-    /*const std::string& GetName();
+    const std::string& GetName();
     void SetName(std::string name);
 
-    //int GetId() const;
+    int GetId() const;
     void SetId(int id);
 
     float GetRadius() const;
     void SetRadius(float radius);
 
+    const std::vector<float>& GetDirection() const;
+    const void SetDirection(std::vector<float> direction);
+
+    const std::vector<float>& GetPosition() const;
+    const void SetPosition(std::vector<float> position);
+
     int GetVersion() const;
-    void setVersion(int version);
+    void SetVersion(int version);
 
     bool IsDynamic() const;
     void SetDynamic(bool dynamic);
-*/
+
     const picojson::object& GetDetails();
 
   protected:
-    /*std::string name_;
+    std::string name_;
     int id_;
     float radius_;
-    Vector3d direction_;
-    Vector3d position_;
+    std::vector<float> direction_;
+    std::vector<float> position_;
     int version_;
-    bool dynamic_;*/
+    bool dynamic_;
     picojson::object details_;
 };
 
