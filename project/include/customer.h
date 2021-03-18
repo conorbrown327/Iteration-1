@@ -28,23 +28,6 @@ namespace csci3081
 class Customer : public csci3081::EntityBase{
  public:
     Customer();
-
-    const std::string& GetName();
-
-    int GetId() const;
-
-    float GetRadius() const;
-
-    int GetVersion() const;
-
-    bool IsDynamic() const;
-
-    void SetPosition(Vector3d *position);
-    Vector3d* GetPosition();
-
-  private:
-    std::string name;
-    Vector3d *position;
 };
 
 }  // namespace csci3081

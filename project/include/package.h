@@ -24,7 +24,7 @@ class Package : public csci3081::EntityBase{
   public:
     Package();
 
-    const std::string& GetName();
+    /*const std::string& GetName();
 
     int GetId() const;
 
@@ -38,16 +38,16 @@ class Package : public csci3081::EntityBase{
    // Customer* GetCustomer();
 
     void SetPosition(Vector3d *position);
-    Vector3d* GetPosition();
+    Vector3d* GetPosition();*/
     
     void SetWeight(float weight);
     float GetWeight();
 
   private:
     //Customer *customer;
-    std::string name;
-    Vector3d *position;
-    float weight;
+    //std::string name;
+    //Vector3d *position;
+    float weight_;
 };
 
 }  // namespace csci3081
