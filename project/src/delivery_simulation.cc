@@ -13,9 +13,9 @@ IEntity* DeliverySimulation::CreateEntity(const picojson::object& val) {
   //TODO for lab10: replace the ?????'s with the appropriate values,
   //  then uncomment the section of code
   
-  if (JsonHelper::GetString(val, "drone/customer/package") == "drone") {
-    std::vector<float> position = JsonHelper::GetStdFloatVector(val, "drone");
-    std::vector<float> direction = JsonHelper::GetStdFloatVector(val, "drone");
+  if (JsonHelper::GetString(val, "name") == "drone") {
+    std::vector<float> position = JsonHelper::GetStdFloatVector(val, "position");
+    std::vector<float> direction = JsonHelper::GetStdFloatVector(val, "direction");
     return new Drone(position, direction, val);
   }
   
