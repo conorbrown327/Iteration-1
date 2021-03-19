@@ -4,21 +4,21 @@ namespace csci3081 {
 
 Vector3d::Vector3d()
 {
-    x = 0.0;
-    y = 0.0;
-    z = 0.0;
+    x_ = 0.0;
+    y_ = 0.0;
+    z_ = 0.0;
 }
 
 Vector3d::Vector3d(float x, float y, float z)
 {
-    this->x = x;
-    this->y = y;
-    this->z = z;
+    x_ = x;
+    y_ = y;
+    z_ = z;
 }
 
-Vector3d Vector3d::Normalize()
+Vector3d* Vector3d::Normalize()
 {
-    return Vector3d();
+    return new Vector3d(1.0, 1.0, 1.0);
 }
 
 float Vector3d::Magnitude()
@@ -26,10 +26,10 @@ float Vector3d::Magnitude()
     return 0.0;
 }
 
-void Vector3d::SetX(float x) {this->x = x;}
-float Vector3d::GetX() {return x;}
-void Vector3d::SetY(float y) {this->y = y;}
-float Vector3d::GetY() {return y;}
-void Vector3d::SetZ(float z) {this->z = z;}
-float Vector3d::GetZ() {return z;}
+void Vector3d::SetX(float x) { x_ = x; }
+float Vector3d::GetX() { return x_; }
+void Vector3d::SetY(float y) { y_ = y; }
+float Vector3d::GetY() { return y_; }
+void Vector3d::SetZ(float z) { z_ = z; }
+float Vector3d::GetZ() { return z_; }
 }

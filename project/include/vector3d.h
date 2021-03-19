@@ -26,7 +26,7 @@ class Vector3d{
     Vector3d();
     Vector3d(float x, float y, float z);
 
-    Vector3d Normalize();
+    Vector3d* Normalize();
     float Magnitude();
 
     void SetX(float x);
@@ -37,7 +37,7 @@ class Vector3d{
     float GetZ();
 
   private:
-    float x, y, z;
+    float x_, y_, z_;
 };
 
 }  // namespace csci3081

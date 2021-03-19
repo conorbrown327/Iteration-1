@@ -26,8 +26,13 @@ namespace csci3081 {
  */
 class Drone : public csci3081::EntityBase {
   public:
-    //Drone();
+    // Default drone constructor to be used for testing
+    Drone();
     Drone(std::vector<float> pos, std::vector<float> direction, const picojson::object& obj);
+
+    Battery* GetBattery();
+    void SetBattery(Battery* battery);
+
   private:
     Battery *battery_;
 };

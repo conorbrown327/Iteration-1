@@ -42,9 +42,9 @@ class Battery{
         bool GetEmpty();
 
     private:
-        float maxCharge;
-        float remainingCharge;
-        bool empty;
+        float maxCharge_;
+        float remainingCharge_;
+        bool empty_;
 };
 
 }  // namespace csci3081
