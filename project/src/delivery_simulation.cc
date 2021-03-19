@@ -21,8 +21,7 @@ IEntity* DeliverySimulation::CreateEntity(const picojson::object& val) {
 
 void DeliverySimulation::AddFactory(IEntityFactory* factory) {}
 
-void DeliverySimulation::AddEntity(IEntity* entity) { 
-  //TODO for lab10: One line of code
+void DeliverySimulation::AddEntity(IEntity* entity) {
 	entities_.push_back(entity);
 }
 
