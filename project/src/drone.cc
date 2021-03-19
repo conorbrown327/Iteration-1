@@ -16,6 +16,7 @@ Drone::Drone()
   version_ = 0;
   dynamic_ = true;
   battery_ = new Battery();
+  speed_ = 0.0;
 }
 
 Drone::Drone(std::vector<float> position, std::vector<float> direction, 
@@ -28,13 +29,17 @@ Drone::Drone(std::vector<float> position, std::vector<float> direction,
   id_ = 0;
   version_ = 0;
   dynamic_ = true;
+  battery_ = new Battery();
+  speed_ = 0.0;
 
   // The following line saves the json object in the details_ member variable
   // from the EntityBase class, in order to return it later in GetDetails()
   details_ = details;
-  battery_ = new Battery();
 }
 
 Battery* Drone::GetBattery() { return battery_; }
 void Drone::SetBattery(Battery* battery) { battery_ = battery; }
+
+float Drone::GetSpeed() { return speed_; }
+void Drone::SetSpeed(float speed) { speed_ = speed; }
 }  // namespace csci3081

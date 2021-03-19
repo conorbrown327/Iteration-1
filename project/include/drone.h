@@ -33,8 +33,12 @@ class Drone : public csci3081::EntityBase {
     Battery* GetBattery();
     void SetBattery(Battery* battery);
 
+    float GetSpeed();
+    void SetSpeed(float speed);
+
   private:
     Battery *battery_;
+    float speed_;
 };
 
 }  // namespace csci3081

@@ -38,7 +38,8 @@ TEST_F(DroneTest, DefaultDroneConstructed)
     ASSERT_FLOAT_EQ(1.0, dro->GetRadius());
     ASSERT_EQ(0, dro->GetVersion());
     ASSERT_EQ(true, dro->IsDynamic());
-    ASSERT_NE(nullptr, dro->GetBattery());
+    ASSERT_NE(nullptr, dro->GetBattery());    
+    ASSERT_FLOAT_EQ(0.0, dro->GetSpeed());
 }
 /** Test getter and setter for battery_ */
 TEST_F(DroneTest, BatteryTest)
@@ -46,6 +47,12 @@ TEST_F(DroneTest, BatteryTest)
     Battery* batt = new Battery();
     dro->SetBattery(batt);
     ASSERT_NE(nullptr, dro->GetBattery());
+}
+/** Test getter and setter for speed_ */
+TEST_F(DroneTest, SpeedTest)
+{
+    dro->SetSpeed(7.77);
+    ASSERT_FLOAT_EQ(7.77, dro->GetSpeed());
 }
 /** Test getter and setter for name_ */
 TEST_F(DroneTest, NameTest) 
