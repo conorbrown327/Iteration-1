@@ -1,11 +1,26 @@
+/**
+ *@file vector3d.h
+ */
 #ifndef VECTOR_H
 #define VECTOR_H
 
+/*******************************************************************************
+ * Includes
+ ******************************************************************************/
 #include <vector>
 #include <string>
 
 namespace csci3081 {
 
+/*******************************************************************************
+ * Class Definitions
+ ******************************************************************************/
+/**
+ * @brief This class defines Vector3d.
+ *
+ * This class defines the object Vector3d to be used to determine positons
+ * for instances of EntityBase objects.
+ */
 class Vector3d{
  public:
     Vector3d();
@@ -25,6 +40,6 @@ class Vector3d{
     float x, y, z;
 };
 
-}
+}  // namespace csci3081
 
 #endif  // VECTOR_H

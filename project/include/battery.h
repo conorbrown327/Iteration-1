@@ -1,15 +1,37 @@
-namespace csci3081 {
+/**
+ *@file battery.h
+ */
+#ifndef CUSTOMER_H
+#define CUSTOMER_H
 
+namespace csci3081 
+{
+
+/*******************************************************************************
+ * Class Definitions
+ ******************************************************************************/
+/**
+ * @brief This class defines Battery.
+ *
+ * This class defines the Battery object to be used in the Drone class.
+ * The Battery will keep track of its charge while a drone is delivering.
+ */
 class Battery{
     public:
         Battery();
         Battery(float maxCharge, float remainingCharge, bool empty);
 
-        // check to see if the battery is empty
+        /**
+         * Function to check to see if the battery is empty.
+         */ 
         bool IsEmpty();
-        // decrease the battery's charge when in use
+        /**
+         * Decrease the battery charge while the drone is active.
+         */
         void DecreaseCharge();
-        // charge the battery if needed after used
+        /**
+         * Charge the battery if the battery is empty.
+         */
         void ChargeBattery();
 
         void SetCharge(float charge);
@@ -25,4 +47,6 @@ class Battery{
         bool empty;
 };
 
-}
+}  // namespace csci3081
+
+#endif  // CUSTOMER_H

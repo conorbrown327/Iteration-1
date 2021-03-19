@@ -1,29 +1,48 @@
+/**
+ *@file vector2d.h
+ */
 #ifndef VECTOR2D_H
 #define VECTOR2D_H
 
+/*******************************************************************************
+ * Includes
+ ******************************************************************************/
 #include <vector>
 #include <string>
-#include "vector3d.h"
-//#include "entity_base.h"
 
 namespace csci3081 
 {
 
+/*******************************************************************************
+ * Class Definitions
+ ******************************************************************************/
+/**
+ * @brief This class defines Vector2d.
+ *
+ * This class is currently not used in this implementation.
+ */
 class Vector2d
 {
     public:
         Vector2d();
-        Vector2d(float x, float z);
+        Vector2d(float x, float y);
 
-        Vector3d* GetVec();
-        void SetVec(Vector3d* vec);
+        float GetDirection();
+        float GetMagnitude();
+        void Normalize();
+
+        float GetX();
+        void SetX(float x);
+        float GetY();
+        void SetY(float y);
 
     private:
-        Vector3d* vec;
+        float x_;
+        float y_;
 
 };
 
-}
+}  // namespace csci3081
 
 #endif  // VECTOR2D_H
 
