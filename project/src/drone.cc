@@ -22,15 +22,11 @@ Drone::Drone()
 Drone::Drone(std::vector<float> position, std::vector<float> direction, 
              const picojson::object& details) 
 {
-  name_ = "name";
   position_ = position;
   direction_ = direction;
-  radius_ = 1.0;
-  id_ = 0;
-  version_ = 0;
-  dynamic_ = true;
   battery_ = new Battery();
-  speed_ = 0.0;
+  radius_ = 1.0;
+  dynamic_ = true;
 
   // The following line saves the json object in the details_ member variable
   // from the EntityBase class, in order to return it later in GetDetails()

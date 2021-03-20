@@ -1,12 +1,13 @@
 /**
  *@file package.h
  */
- #ifndef PACKAGE_H
+#ifndef PACKAGE_H
 #define PACKAGE_H
 
+/*******************************************************************************
+ * Includes
+ ******************************************************************************/
 #include "entity_base.h"
-//#include "customer.h"
-#include "vector3d.h"
 #include <vector>
 #include <string>
 
@@ -17,12 +18,12 @@ namespace csci3081 {
 /**
  * @brief This class defines Package.
  *
- * Package inherits from EntityBase. It's only unique attribute is a weight
- * to determine the drone's speed when delivering the package.
+ * Package inherits from EntityBase. It's only unique attribute is weight.
  */
 class Package : public csci3081::EntityBase{
   public:
     Package();
+    Package(std::vector<float> pos, std::vector<float> direction, const picojson::object& obj);
     
     void SetWeight(float weight);
     float GetWeight();

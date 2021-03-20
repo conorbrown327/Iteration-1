@@ -18,6 +18,19 @@ Package::Package()
     weight_ = 0.0;
 }
 
+Package::Package(std::vector<float> position, std::vector<float> direction, 
+             const picojson::object& details) 
+{
+  position_ = position;
+  direction_ = direction;
+  radius_ = 1.0;
+  dynamic_ = true;
+
+  // The following line saves the json object in the details_ member variable
+  // from the EntityBase class, in order to return it later in GetDetails()
+  details_ = details;
+}
+
 void Package::SetWeight(float weight) { weight_ = weight; }
 float Package::GetWeight() { return weight_; }
 }

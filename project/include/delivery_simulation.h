@@ -10,6 +10,12 @@
 #include <EntityProject/facade/delivery_system.h>
 #include <vector>
 #include <string>
+#include "entity_base.h"
+#include "json_helper.h"
+#include "composite_factory.h"
+#include "drone_factory.h"
+#include "customer_factory.h"
+#include "package_factory.h"
 
 namespace csci3081 {
 
