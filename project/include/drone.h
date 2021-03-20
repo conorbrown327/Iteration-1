@@ -36,9 +36,16 @@ class Drone : public csci3081::EntityBase {
     float GetSpeed();
     void SetSpeed(float speed);
 
+    /** Beeline to the Package and pick it up*/
+    void PickUpPackage(float dt);
+    /** Beeline from the package after picked up to the customer */
+    void DeliverToCustomer(float dt);
+
   private:
     Battery *battery_;
     float speed_;
+    std::vector<float> packPos;
+    std::vector<float> custPos;
 };
 
 }  // namespace csci3081

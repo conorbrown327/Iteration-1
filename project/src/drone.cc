@@ -38,4 +38,7 @@ void Drone::SetBattery(Battery* battery) { battery_ = battery; }
 
 float Drone::GetSpeed() { return speed_; }
 void Drone::SetSpeed(float speed) { speed_ = speed; }
+
+void Drone::PickUpPackage(float dt) {}
+void Drone::DeliverToCustomer(float dt) {}
 }  // namespace csci3081
