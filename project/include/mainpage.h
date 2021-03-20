@@ -37,15 +37,19 @@
 *
 * The concrete factory pattern is useful when there will not be other objects to create later on. For example in the simulation if only drones, packages and customers
 * were to be implemented then concrete would be a fine choice. However, because trucks and other IEntity's are planned for the future this factory pattern 
-* was avoided.
-* \image html /ConcreteFactory.png "Concrete Factory Pattern" width = 900 cm
+* was avoided. The concrete method also appears as the most staightforward and intuitive of the factories. There is simply one factory doing all the work
+* to create all types of the factory. In the example UML for this implementation within this project there would be one IEntityFactory that creates Drones,
+* Customers and Packages. 
+* \image html /ConcreteFctory.png "Concrete Factory Pattern" width = 900 cm
 * 
 * An abstract factory pattern pushing creation of the entities to subclasses. This can create a facade for creation code that is not necessary to see in 
 * the client code. Abstract factory patterns suffer from the same disadvantage as composite. It is difficult to extend abstract factories to support
-* new additions to the code.
+* new additions to the code. Here now in the abstract example we can see that there are three factories for creating Drones, Customers and Packages.
+* This allows for easier addition of trucks but still not as easy as it is with the composite factory. This is because we still would need to have
+* an if statement to determine which factory to call based on the type. However in the composite method this is not necessary.
 * \image html /AbstractFactory.png "Abstract Factory Pattern" width = 900 cm
 *
-* Composite factories utilizes inheritance to create the factories in the composite class and pushes the instantiation of the class to the specific 
+* Composite factories utilize inheritance to create the factories in the composite class and pushes the instantiation of the class to the specific 
 * subclass factory. This allows for decreased coupling between the code as classes are separated but only connected through the composite factory class.
 * Again, this would create issues when refactoring code to include something that does not fall within the generalized type specified for the factory pattern.
 * For example in our factory pattern if we wanted to add a truck it would be easy because it fits the IEntity descripton. But if we wanted to add a drone controller
