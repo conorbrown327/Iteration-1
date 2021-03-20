@@ -39,10 +39,10 @@ class EntityBase : public IEntity {
     void SetRadius(float radius);
 
     const std::vector<float>& GetDirection() const;
-    const void SetDirection(std::vector<float> direction);
+    const void SetDirection(std::vector<float>& direction);
 
     const std::vector<float>& GetPosition() const;
-    const void SetPosition(std::vector<float> position);
+    const void SetPosition(std::vector<float>& position);
 
     int GetVersion() const;
     void SetVersion(int version);
@@ -57,7 +57,7 @@ class EntityBase : public IEntity {
     int id_;
     float radius_;
     std::vector<float> direction_;
-    std::vector<float> position_;
+    std::vector<float> position_ = {0, 0, 0};
     int version_;
     bool dynamic_;
     picojson::object details_;

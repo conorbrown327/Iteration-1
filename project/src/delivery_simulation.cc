@@ -31,7 +31,18 @@ void DeliverySimulation::AddEntity(IEntity* entity)
 
 void DeliverySimulation::SetGraph(const IGraph* graph) {}
 
-void DeliverySimulation::ScheduleDelivery(IEntity* package, IEntity* dest) {}
+void DeliverySimulation::ScheduleDelivery(IEntity* package, IEntity* dest) 
+{
+	Drone* deliverer;
+	for(IEntity* i : entities_)
+	{
+		if(i->GetName() == "drone")
+			deliverer = dynamic_cast<Drone*>(i);
+	}
+	deliverer->SetPackagePosition(package->GetPosition());
+	deliverer->SetCustomerPosition(dest->GetPosition());
+
+}
 
 void DeliverySimulation::AddObserver(IEntityObserver* observer) {}
 
@@ -41,9 +52,14 @@ const std::vector<IEntity*>& DeliverySimulation::GetEntities() const { return en
 
 void DeliverySimulation::Update(float dt) 
 {
+	Drone* deliverer;
 	for(IEntity* i : entities_)
 	{
+		if(i->GetName() == "drone")
+			deliverer = dynamic_cast<Drone*>(i);
 	}
+
+	deliverer->DeliverPackage(dt);
 }
 
 

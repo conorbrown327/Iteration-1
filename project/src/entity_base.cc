@@ -13,10 +13,10 @@ namespace csci3081
     void EntityBase::SetRadius(float radius) { radius_ = radius; }
 
     const std::vector<float>& EntityBase::GetDirection() const { return direction_; }
-    const void EntityBase::SetDirection(std::vector<float> direction) { direction_ = direction; }
+    const void EntityBase::SetDirection(std::vector<float>& direction) { direction_ = direction; }
 
     const std::vector<float>& EntityBase::GetPosition() const { return position_; }
-    const void EntityBase::SetPosition(std::vector<float> position) { position_ = position; }
+    const void EntityBase::SetPosition(std::vector<float>& position) { position_ = position; }
 
     int EntityBase::GetVersion() const { return version_; }
     void EntityBase::SetVersion(int version) { version_ = version; }
