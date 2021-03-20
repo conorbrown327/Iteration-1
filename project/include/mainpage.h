@@ -38,12 +38,12 @@
 * The concrete factory pattern is useful when there will not be other objects to create later on. For example in the simulation if only drones, packages and customers
 * were to be implemented then concrete would be a fine choice. However, because trucks and other IEntity's are planned for the future this factory pattern 
 * was avoided.
-* \image html /AbstractFactoryPattern-2.png
+* \image html /ConcreteFactory.png "Concrete Factory Pattern" width = 900 cm
 * 
 * An abstract factory pattern pushing creation of the entities to subclasses. This can create a facade for creation code that is not necessary to see in 
 * the client code. Abstract factory patterns suffer from the same disadvantage as composite. It is difficult to extend abstract factories to support
 * new additions to the code.
-* \image html /abstractfactory_pattern_uml_diagram.jpg
+* \image html /AbstractFactory.png "Abstract Factory Pattern" width = 900 cm
 *
 * Composite factories utilizes inheritance to create the factories in the composite class and pushes the instantiation of the class to the specific 
 * subclass factory. This allows for decreased coupling between the code as classes are separated but only connected through the composite factory class.
@@ -51,7 +51,7 @@
 * For example in our factory pattern if we wanted to add a truck it would be easy because it fits the IEntity descripton. But if we wanted to add a drone controller
 * or air traffic controller it would be difficult. These wouldn't be delivering or moving but instead a scheduling type of interaction would occur. Implementing
 * something like this is not as clear and obvious as it would be for a truck.
-* \image html /CompositeFactoryUML.png
+* \image html /CompositeFactoryUML.png "Composite Factory Pattern" width = 900 cm
 *
 * @author Conor Brown, brow4339
 */
