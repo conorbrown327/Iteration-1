@@ -28,6 +28,7 @@ namespace csci3081
 class Customer : public csci3081::EntityBase{
  public:
     Customer();
+    Customer(std::vector<float> pos, std::vector<float> direction, const picojson::object& obj);
 };
 
 }  // namespace csci3081

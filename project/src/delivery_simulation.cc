@@ -1,31 +1,31 @@
 #include "delivery_simulation.h"
-#include "entity_base.h"
-#include "json_helper.h"
-#include "drone.h"
 
 namespace csci3081 {
 
-DeliverySimulation::DeliverySimulation() {}
-
-DeliverySimulation::~DeliverySimulation() {}
-
-IEntity* DeliverySimulation::CreateEntity(const picojson::object& val) {
-  //TODO for lab10: replace the ?????'s with the appropriate values,
-  //  then uncomment the section of code
-  JsonHelper::PrintEntityDetails(val);
-  if (JsonHelper::GetString(val, "type") == "drone") {
-    std::vector<float> position = JsonHelper::GetStdFloatVector(val, "position");
-    std::vector<float> direction = JsonHelper::GetStdFloatVector(val, "direction");
-    return new Drone(position, direction, val);
-  }
-  
-  return NULL;
+CompositeFactory* compFact = new CompositeFactory();
+DeliverySimulation::DeliverySimulation() {
+	compFact->AddFactory(new DroneFactory());
+	compFact->AddFactory(new CustomerFactory());
+	compFact->AddFactory(new PackageFactory());
 }
 
-void DeliverySimulation::AddFactory(IEntityFactory* factory) {}
+DeliverySimulation::~DeliverySimulation() 
+{
+	delete compFact;
+}
 
-void DeliverySimulation::AddEntity(IEntity* entity) { 
-  //TODO for lab10: One line of code
+IEntity* DeliverySimulation::CreateEntity(const picojson::object& val) 
+{
+  	return compFact->CreateEntity(val);
+}
+
+void DeliverySimulation::AddFactory(IEntityFactory* factory) 
+{
+	compFact->AddFactory(factory);
+}
+
+void DeliverySimulation::AddEntity(IEntity* entity) 
+{
 	entities_.push_back(entity);
 }
 
@@ -39,7 +39,12 @@ void DeliverySimulation::RemoveObserver(IEntityObserver* observer) {}
 
 const std::vector<IEntity*>& DeliverySimulation::GetEntities() const { return entities_; }
 
-void DeliverySimulation::Update(float dt) {}
+void DeliverySimulation::Update(float dt) 
+{
+	for(IEntity* i : entities_)
+	{
+	}
+}
 
 
 // DO NOT MODIFY THE FOLLOWING UNLESS YOU REALLY KNOW WHAT YOU ARE DOING
